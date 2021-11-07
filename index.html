@@ -1,0 +1,49 @@
+<!-- Сообщаем браузеру как стоит обрабатывать эту страницу -->
+<!DOCTYPE html>
+<!-- Оболочка документа, указываем язык содержимого -->
+<html lang="en">
+
+<head>
+	<!-- Заголовок страницы в браузере -->
+	<title>To do list</title>
+	<!-- Подключаем CSS -->
+	<link rel="stylesheet" href="css/style.css" />
+	<!-- Кодировка страницы -->
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+</head>
+<!-- Отображаемое тело страницы -->
+
+<body>
+	<div class="wrapper">
+		<div class="to-do">
+			<div class="to-do__container">
+				<div class="to-do__title">
+					<h1>Ваш сегодняшний ToDo list:</h1>
+				</div>
+				<div class="to-do__header">
+					<div  class="to-do__task-panel">
+						<input type="text" name="" id="" placeholder="Я хочу..." class="to-do__input">
+						<button class="to-do__btn btn btn_w btn_plus" ><span>+</span></button>
+					</div>
+				</div>
+				<div class="to-do__body">
+					<div class="to-do__list">
+						<div class="to-do__item">
+							<span class="to-do__id">№1</span>
+							<span class="to-do__text"> Написать To-Do лист</span>
+							<div class="to-do__checkbox custom_checkbox">
+								<input type="checkbox" value="value-1">
+								<span></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Подключаемые скрипты -->
+	<script src="js/script.js"></script>
+</body>
+
+</html>

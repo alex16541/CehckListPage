@@ -1,0 +1,11 @@
+.form__column {
+  padding: 0px 15px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0px 0px;
+}
+.btn.fw {
+  width: 100%;
+}

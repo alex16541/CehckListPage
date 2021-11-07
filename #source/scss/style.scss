@@ -1,0 +1,171 @@
+//<МИКСИНЫ>==========================================================================
+@mixin anim($time,$delay) {-webkit-transition: all $time ease $delay;-moz-transition: all $time ease $delay;-ms-transition: all $time ease $delay;-o-transition: all $time ease $delay;transition: all $time ease $delay;}
+@mixin cnt($h) {display: flex;flex-direction: column; height: $h; text-align: center; align-items: stretch; justify-content: center;}
+@mixin tr($x,$y,$z) {transform: translate3d($x,$y,$z);}
+@mixin flexbox() {display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:-webkit-flex;display:flex;font-size:0;}
+@mixin flexboxinline() {display:-moz-inline-flex; display:-ms-inline-flex;  display:-o-inline-flex; display:-inline-flex;display: -webkit-inline-flex;}
+@mixin flexorder($val) {-webkit-box-ordinal-group: $val; -moz-box-ordinal-group: $val; -ms-flex-order: $val; -webkit-order: $val; order: $val;}
+//</МИКСИНЫ>==========================================================================
+
+//<ШРИФТЫ>==========================================================================
+
+@import url("../../fonts/Gilroy/stylesheet.css");
+
+//<Подключаемые шрифты>==========================================================================
+
+//</Подключаемые шрифты>==========================================================================
+
+
+//<Шрифт по умолчанию>==========================================================================
+$fontfamily:"Gilroy";
+$fontcolor:#000;
+//</Шрифт по умолчанию>==========================================================================
+
+//</ШРИФТЫ>==========================================================================
+
+//<ПЕРЕМЕННЫЕ>==========================================================================
+$minwidth:320px;
+$mw:1420;
+$md1:$mw+12;
+$md2:992.98;
+$md3:767.98;
+$md4:479.98;
+//</ПЕРЕМЕННЫЕ>==========================================================================
+
+//<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>==========================================================================
+*{padding: 0;margin: 0;border: 0;}
+*,*:before,*:after{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+nav,footer,header,aside{display: block;}
+html,body{height:100%;width:100%;font-size:100%;line-height:1;font-size:14px;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+html {scroll-behavior: smooth;} //Мягкая прокрутка
+body {
+	height: 100%; 
+	color: $fontcolor;
+	font-size: 18px;
+	font-family: $fontfamily;
+	font-weight: 500;
+	text-align: center;
+}
+input,button,textarea{font-family:inherit;}
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner{padding:0;border:0;}
+a,a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
+//</ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>==========================================================================
+
+//<ОБОЛОЧКА>==========================================================================
+.wrapper{
+	width: 100%;
+	overflow: hidden;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+}
+//</ОБОЛОЧКА>==========================================================================
+
+//<ОСНОВНАЯ СЕТКА>==========================================================================
+.container {max-width:$mw+px;margin: 0 auto; width: 100%;
+	@media (max-width:#{$md1}px){max-width: 970px;}
+	@media (max-width:#{$md2}px){max-width: 750px;}
+	@media (max-width:#{$md3}px){max-width: none;padding:0 10px;}
+
+}
+//</ОСНОВНАЯ СЕТКА>==========================================================================
+
+//<ПОДКЛЮЧАЕМЫЕ ФАЙЛЫ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>==========================================================================
+@import "ibg.scss";
+//</ПОДКЛЮЧАЕМЫЕ ФАЙЛЫ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>==========================================================================
+
+//<ОСНОВНОЙ БЛОК>==========================================================================
+
+
+.wrapper { }
+.to-do {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 100%;
+	&__container { 
+		border: 4px solid #444;
+		max-width: 800px;
+		border-radius: 10px;
+		
+		padding: 10px;
+		margin: 10px;
+		height: 700px;
+	}
+	&__title { 
+		font-size: 30px;
+		font-weight: bold;
+	}
+	&__header {
+		margin-top: 10px;
+		width: 100%;
+	 }
+	&__task-panel {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	 }
+	&__input {
+		border: 1px solid black;
+		width: 100%;
+		font-size: 14px;
+		padding: 10px;
+		border-radius: 5px;
+		margin-right: 10px;
+	 }
+	&__btn { }
+	&__body {
+		margin-top: 10px;
+		height: 575px;
+	 }
+	&__list { 
+		height: 100%;
+		overflow: auto;
+	}
+	&__item {
+		margin-top: 10px;
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+	 }
+	&__id {
+		padding-top: 7px;
+	 }
+	&__text { 
+		padding-top: 7px;
+
+	}
+	&__checkbox {
+
+		& span{
+			
+			font-size: 40px;
+			
+		}
+	 }
+}
+.btn { }
+
+
+
+//====================================================================================================
+
+//</ОСНОВНОЙ БЛОК>==========================================================================
+
+//<ПОДКЛЮЧАЕМЫЕ ФАЙЛЫ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>==========================================================================
+@import 'forms.scss';
+//</ПОДКЛЮЧАЕМЫЕ ФАЙЛЫ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>==========================================================================
+
+
+
